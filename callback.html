@@ -4,6 +4,6 @@
 <script>
 // Repassa o retorno do OAuth para a Central local (o código só vale com o segredo, que fica no computador do criador).
 var q = location.search;
-if (q) location.replace('http://localhost:8791/callback' + q);
+if (q) location.replace('http://127.0.0.1:8791/callback' + q);
 else document.getElementById('m').textContent = 'Nada para repassar.';
 </script></body></html>
