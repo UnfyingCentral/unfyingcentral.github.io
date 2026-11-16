@@ -1,0 +1,9 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Central do Canal - retorno</title><link rel="stylesheet" href="estilo.css"></head>
+<body><div class="wrap"><h1>Central do Canal</h1><p id="m">Voltando para a Central no seu computador…</p>
+<p class="meta">Authorization return page: sends the result back to the Central running on the owner's own computer.</p></div>
+<script>
+// Repassa o retorno do OAuth para a Central local (o código só vale com o segredo, que fica no computador do criador).
+var q = location.search;
+if (q) location.replace('http://localhost:8791/callback' + q);
+else document.getElementById('m').textContent = 'Nada para repassar.';
+</script></body></html>
